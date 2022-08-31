@@ -1,0 +1,14 @@
+<form class="form" [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="first-name">First Name: </label>
+        <input class="form-control" id="first-name" type="text" formControlName="firstName" required>
+    </div>
+    <label for="last-name">Last Name: </label>
+    <input class="form-control" id="last-name" type="text" formControlName="lastName">
+    <div class="form-group">
+        <label for="street">Address: </label>
+        <input class="form-control" id="street" type="text" formControlName="address">
+    </div>
+    <p>Complete the form to enable button.</p>
+    <button type="submit" class="btn btn-success" [disabled]="!profileForm.valid">Submit</button>
+</form>
